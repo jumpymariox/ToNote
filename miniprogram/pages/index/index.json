@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "note-list":"./components/note-list/note-list"
+  }
 }

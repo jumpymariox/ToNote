@@ -1,0 +1,9 @@
+/* pages/index/components/note/note.wxss */
+.title {
+  font-size: 40rpx;
+}
+
+.content {
+  margin-left: 16rpx;
+  font-size: 32rpx;
+}

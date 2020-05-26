@@ -1,0 +1,9 @@
+/* pages/index/components/note-list.wxss */
+:host {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  padding: 16rpx 32rpx;
+}

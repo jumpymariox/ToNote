@@ -1,2 +1,9 @@
-# ToNote
-yes, let's to note!
+# ToNote 小程序便签应用
+
+## Task list
+- [ ] 基础数据模型定义
+- [ ] 模型同步ui渲染
+- [ ] 数据访问层和接口
+- [ ] 数据持久化
+- [ ] CRUD
+

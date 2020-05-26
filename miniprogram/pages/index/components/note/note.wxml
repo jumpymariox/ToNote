@@ -1,0 +1,3 @@
+<!--pages/index/components/note/note.wxml-->
+<text class="title">{{note.title}}</text>
+<text class="content">{{note.content}}</text>
