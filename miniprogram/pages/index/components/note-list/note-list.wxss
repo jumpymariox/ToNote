@@ -4,6 +4,7 @@
   width: 100%;
 }
 
-.container {
-  padding: 16rpx 32rpx;
+:host {
+  display: flex;
+  flex-wrap: wrap;
 }

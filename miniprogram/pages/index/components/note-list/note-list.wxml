@@ -1,3 +1,1 @@
-<view class="container" wx:for="{{notes}}">
-	<note note="{{item}}"></note>
-</view>
+<note wx:for="{{notes}}" note="{{item}}"></note>

@@ -1,9 +1,32 @@
 /* pages/index/components/note/note.wxss */
+:host {
+  box-sizing: border-box;
+  margin: 23rpx 16rpx;
+  padding: 16rpx;
+  width: 218rpx;
+  height: 300rpx;
+  border: 1px solid #ddd;
+}
+
+.container {
+  display: -webkit-box;
+  word-break: break-all;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
 .title {
-  font-size: 40rpx;
+  display: -webkit-box;
+  font-weight: 600;
+  font-size: 36rpx;
+  color: #666;
+  overflow: hidden;
+  text-align: right;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .content {
-  margin-left: 16rpx;
-  font-size: 32rpx;
+  font-size: 21rpx;
 }
