@@ -5,7 +5,13 @@ export class NoteService {
 
   fetchNotes(): Promise<{ notes: Note[] }> {
     return new Promise((resolve: (value: { notes: Note[] }) => void) => {
-      resolve({ notes: MOCK.notes });
+      wx.request({
+        url: "localhost:8080/notes", success() {
+          resolve({ notes: MOCK.notes });
+        }, fail() {
+
+        }
+      })
     })
   }
 }

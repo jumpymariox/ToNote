@@ -1,11 +1,11 @@
 import { NoteService } from "../../../../service/note.service"
 
-interface IData { notes: Note[] }
-interface IPrpperty { }
-interface IMethod { }
+type IData = { notes: Note[] }
+type IProperty = {}
+type IMethod = {}
 
 // pages/index/components/note-list.js
-Component<IData, IPrpperty, IMethod>({
+Component<IData, IProperty, IMethod>({
   /**
    * Component properties
    */
