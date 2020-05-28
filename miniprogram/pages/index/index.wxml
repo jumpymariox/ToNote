@@ -1,4 +1,9 @@
 <!--index.wxml-->
 <view>
-  <note-list></note-list>
+	<mp-navigation-bar title="ToNote"></mp-navigation-bar>
+	<mp-icon icon="add" color="#000" size="{{35}}"></mp-icon>
+</view>
+
+<view>
+	<note-list></note-list>
 </view>
