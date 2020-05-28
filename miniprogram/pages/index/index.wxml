@@ -1,4 +1,4 @@
 <!--index.wxml-->
 <view>
-  <note-list notes="{{notes}}"></note-list>
+  <note-list></note-list>
 </view>

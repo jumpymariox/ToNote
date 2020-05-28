@@ -1,3 +1,4 @@
+
 // pages/index/components/note/note.js
 Component({
   /**
@@ -21,6 +22,7 @@ Component({
 
   },
   lifetimes: {
-    attached() {}
+    attached() {
+    }
   }
 })
