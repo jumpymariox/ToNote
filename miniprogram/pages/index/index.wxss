@@ -19,3 +19,29 @@
 .usermotto {
   margin-top: 200px;
 }
+
+button.add-btn {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: fixed;
+  right: 26rpx;
+  bottom: 142rpx;
+  border-radius: 50%;
+  width: 100rpx;
+  height: 100rpx;
+  overflow: hidden;
+  background: #03dac5;
+}
+
+button.add-btn.button-hover {
+  background: #0cb1a1
+}
+
+.weui-icon {
+  margin-top: 24rpx;
+}
+
+.weui-tabbar>.weui-bar__item_on>.weui-tabbar__label {
+  color: #03dac5
+}

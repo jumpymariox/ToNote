@@ -1,9 +1,10 @@
 <!--index.wxml-->
 <view>
-	<mp-navigation-bar title="ToNote"></mp-navigation-bar>
-	<mp-icon icon="add" color="#000" size="{{35}}"></mp-icon>
-</view>
-
-<view>
 	<note-list></note-list>
 </view>
+
+<button class="add-btn" size="mini">
+	<mp-icon icon="add" color="#fff" size="{{26}}"></mp-icon>
+</button>
+
+<mp-tabbar style="position:fixed;bottom:0;width:100%;left:0;right:0;" list="{{tabbar}}"></mp-tabbar>
