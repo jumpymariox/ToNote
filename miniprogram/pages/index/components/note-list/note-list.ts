@@ -1,4 +1,4 @@
-import { NoteService } from "../../../../service/note.service"
+import { noteService } from "../../../../service/note.service"
 
 type IData = { notes: Note[] }
 type IProperty = {}
@@ -27,7 +27,6 @@ Component<IData, IProperty, IMethod>({
 
   lifetimes: {
     attached() {
-      const noteService = new NoteService();
       noteService.fetchNotes().then(({ notes }: { notes: Note[] }) => {
         this.setData({ notes: notes })
       })
