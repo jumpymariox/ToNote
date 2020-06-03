@@ -31,11 +31,11 @@ button.add-btn {
   width: 100rpx;
   height: 100rpx;
   overflow: hidden;
-  background: #03dac5;
+  background: #0cb1a1;
 }
 
 button.add-btn.button-hover {
-  background: #0cb1a1
+  background: #03dac5
 }
 
 .weui-icon {

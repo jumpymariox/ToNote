@@ -1,10 +1,25 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/profile/profile"
   ],
-  "window": {
+  "tabBar": {
+    "list": [{
+        "pagePath": "pages/index/index",
+        "text": "笔记",
+        "iconPath": "./asset/img/note.png",
+        "selectedIconPath": "./asset/img/note_active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "个人",
+        "iconPath": "./asset/img/user.png",
+        "selectedIconPath": "./asset/img/user_active.png"
+      }
+    ]
   },
+  "window": {},
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
