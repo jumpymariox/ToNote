@@ -26,22 +26,19 @@ button.add-btn {
   align-content: center;
   position: fixed;
   right: 26rpx;
-  bottom: 142rpx;
+  bottom: 26rpx;
   border-radius: 50%;
   width: 100rpx;
   height: 100rpx;
   overflow: hidden;
-  background: #0cb1a1;
+  background: #03dac5;
+  box-shadow: 2rpx 2rpx 2rpx 2rpx #ddd;
 }
 
 button.add-btn.button-hover {
-  background: #03dac5
+  background: #0cb1a1
 }
 
 .weui-icon {
   margin-top: 24rpx;
-}
-
-.weui-tabbar>.weui-bar__item_on>.weui-tabbar__label {
-  color: #03dac5
 }

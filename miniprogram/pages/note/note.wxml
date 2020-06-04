@@ -1,0 +1,13 @@
+<!--miniprogram/pages/note/note.wxml-->
+<view class="container">
+	<mp-form id="form" class="note-form" rules="{{rules}}" models="{{formData}}">
+		<view class="note-cells">
+			<view class="note-input-cell">
+				<input class="note-input" maxlength="25" bindinput="formInputChange" data-field="title" placeholder="标题" />
+			</view>
+			<view class="note-editor-cell">
+				<note-editor class="note-editor"></note-editor>
+			</view>
+		</view>
+	</mp-form>
+</view>

@@ -2,10 +2,12 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/note/note"
   ],
   "tabBar": {
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/index/index",
         "text": "笔记",
         "iconPath": "./asset/img/note.png",

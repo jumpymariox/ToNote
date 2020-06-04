@@ -8,7 +8,6 @@ Page({
    * Page initial data
    */
   data: {
-    motto: "test",
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse("button.open-type.getUserInfo"),
@@ -19,6 +18,7 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function () {
+
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

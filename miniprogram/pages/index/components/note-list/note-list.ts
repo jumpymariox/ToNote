@@ -22,7 +22,10 @@ Component<IData, IProperty, IMethod>({
    * Component methods
    */
   methods: {
-
+    redirectToNotePage(event: any) {
+      const noteId = event.currentTarget.id;
+      wx.navigateTo({ url: `/pages/note/note?id=${noteId}` })
+    }
   },
 
   lifetimes: {
