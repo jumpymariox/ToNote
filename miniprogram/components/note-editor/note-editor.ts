@@ -1,6 +1,8 @@
 // components/note-editor/note-editor.js
 
-type IProperty = {}
+type IProperty = {
+  defaultValue: WechatMiniprogram.Component.AllProperty
+}
 type IData = {
   editorCtx?: any,
   placeholder?: string,
@@ -22,6 +24,7 @@ type ICustom = {
   insertDate: () => void,
   insertImage: () => void,
   toggleShowTooltip: (keyboardHeight: number) => void
+  setDefaultValue: (value: string) => void
 }
 
 Component<IData, IProperty, ICustom>({
@@ -29,7 +32,11 @@ Component<IData, IProperty, ICustom>({
    * Component properties
    */
   properties: {
-
+    defaultValue: {
+      type: String, observer(newValue: string) {
+        this.setDefaultValue(newValue);
+      }
+    }
   },
 
   /**
@@ -85,9 +92,9 @@ Component<IData, IProperty, ICustom>({
       return statusBarHeight + navigationBarHeight
     },
     onEditorReady() {
-      const that = this
-      that.createSelectorQuery().select('#editor').context(function (res: any) {
-        that.setData({ editorCtx: res.context });
+      this.createSelectorQuery().select('#editor').context((res: any) => {
+        this.setData({ editorCtx: res.context });
+        this.setDefaultValue(this.properties.defaultValue);
       }).exec()
     },
     focus() {
@@ -155,6 +162,12 @@ Component<IData, IProperty, ICustom>({
         return
       }
       this.setData({ usingKeyboard: keyboardHeight > 0 })
+    },
+    setDefaultValue(value: string) {
+      if (!this.data.editorCtx) {
+        return
+      }
+      this.data.editorCtx.setContents({ html: value });
     }
   }
 })
