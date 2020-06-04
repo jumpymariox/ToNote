@@ -1,4 +1,8 @@
 <!--pages/index/components/note/note.wxml-->
+<view class="select-checkbox {{editting?'show':''}} {{selected?'selected':''}}" value="selected" catchtap="selectNote" hover-class="select-checkbox-hover">
+	<mp-icon class="delete-checkbox-mp-icon" icon="done" color="#fff" size="{{18}}"></mp-icon>
+</view>
+
 <view class="container">
 	<text class="title">{{note.title}}</text>
 	<text class="content">{{note.content}}</text>

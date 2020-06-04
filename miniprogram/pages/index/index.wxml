@@ -1,9 +1,18 @@
 <!--index.wxml-->
 <scroll-view scroll-y="true" style="height: 100%;" bindscrolltoupper="upper">
-	<note-list></note-list>
+	<note-list editting="{{editting}}" bind:readyToEditNotes="readyToEditNotes"></note-list>
 </scroll-view>
 
+<view class="button-container">
+	<button class="add-btn {{showAddBtn?'show':''}}" size="mini" bindtap="createNote">
+		<mp-icon icon="add" color="#fff" size="{{26}}"></mp-icon>
+	</button>
 
-<button class="add-btn" size="mini" bindtap="createNote">
-	<mp-icon icon="add" color="#fff" size="{{26}}"></mp-icon>
-</button>
+	<button class="undo-btn {{showUndoBtn?'show':''}}" size="mini" bindtap="cancelEditNotes">
+		<mp-icon icon="previous" color="#fff" size="{{26}}"></mp-icon>
+	</button>
+
+	<button class="delete-btn {{showDeleteBtn?'show':''}}" size="mini" bindtap="deleteNotes">
+		<mp-icon icon="delete" color="#fff" size="{{26}}"></mp-icon>
+	</button>
+</view>

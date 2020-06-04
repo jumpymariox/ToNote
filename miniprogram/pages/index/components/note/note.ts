@@ -7,6 +7,12 @@ Component({
   properties: {
     note: {
       type: Object
+    },
+    editting: {
+      type: Boolean
+    },
+    selected: {
+      type: Boolean
     }
   },
 
@@ -19,7 +25,9 @@ Component({
    * Component methods
    */
   methods: {
-
+    selectNote() {
+      this.triggerEvent("selectNode", { id: this.properties.note.id, selected: !this.properties.selected });
+    }
   },
   lifetimes: {
     attached() {
