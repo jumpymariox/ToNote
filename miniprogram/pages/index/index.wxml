@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <scroll-view scroll-y="true" style="height: 100%;" bindscrolltoupper="upper">
-	<note-list editting="{{editting}}" bind:readyToEditNotes="readyToEditNotes"></note-list>
+	<note-list notes="{{notes}}" editting="{{editting}}" bind:readyToEditNotes="readyToEditNotes" bind:selectedNotesChange="selectedNotesChange"></note-list>
 </scroll-view>
 
 <view class="button-container">

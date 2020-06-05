@@ -1,24 +1,33 @@
-import { noteService } from "../../../../service/note.service"
+const pickBy = require("lodash.pickby")
+const keys = require("lodash.keys")
 
-type IData = {
-  notes?: Note[],
-  selectedNoteMap: Record<string, boolean>
+namespace NoteList {
+  export type IData = {
+    selectedNoteMap: Record<string, boolean>
+  }
+  export type IProperty = {
+    editting: WechatMiniprogram.Component.AllProperty
+    notes: WechatMiniprogram.Component.AllProperty
+  }
+  export type IMethod = {}
 }
-type IProperty = {
-  editting: WechatMiniprogram.Component.AllProperty
-}
-type IMethod = {}
 
 // pages/index/components/note-list.js
-Component<IData, IProperty, IMethod>({
+Component<NoteList.IData, NoteList.IProperty, NoteList.IMethod>({
   /**
    * Component properties
    */
   properties: {
     editting: {
-      type: Boolean, value: false, observer() {
+      type: Boolean,
+      value: false,
+      observer() {
         this.setData({ selectedNoteMap: {} });
       }
+    },
+    notes: {
+      type: Array,
+      value: []
     }
   },
 
@@ -48,14 +57,14 @@ Component<IData, IProperty, IMethod>({
       this.setData({
         selectedNoteMap: { ...this.data.selectedNoteMap, [id]: selected }
       });
+
+      const selectedNoteIds = keys(pickBy(this.data.selectedNoteMap, (value: boolean) => !!value))
+      this.triggerEvent("selectedNotesChange", { selectedNoteIds: selectedNoteIds });
     }
   },
 
   lifetimes: {
     attached() {
-      noteService.fetchNotes().then(({ notes }: { notes: Note[] }) => {
-        this.setData({ notes: notes })
-      })
     }
   }
 })

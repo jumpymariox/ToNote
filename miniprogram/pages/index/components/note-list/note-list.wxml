@@ -1,1 +1,2 @@
-<note wx:for="{{notes}}" id="{{item.id}}" note="{{item}}" bindtap="redirectToNotePage" bindlongpress="readyToEditNotes" editting="{{editting}}" selected="{{selectedNoteMap[item.id]}}" bind:selectNode="selectNode"></note>
+<note wx:for="{{notes}}" id="{{item.id}}" note="{{item}}" bindtap="redirectToNotePage" editting="{{editting}}" selected="{{selectedNoteMap[item.id]}}" bindlongpress="readyToEditNotes" bind:selectNode="selectNode">
+</note>

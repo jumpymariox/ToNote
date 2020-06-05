@@ -10,9 +10,13 @@
   "author": "",
   "license": "",
   "dependencies": {
+    "lodash.keys": "^4.2.0",
+    "lodash.pickby": "^4.6.0",
     "weui-miniprogram": "^1.0.3"
   },
   "devDependencies": {
+    "@types/lodash.keys": "^4.2.6",
+    "@types/lodash.pickby": "^4.6.6",
     "miniprogram-api-typings": "^2.8.3-1",
     "typescript": "^3.3.3333"
   }

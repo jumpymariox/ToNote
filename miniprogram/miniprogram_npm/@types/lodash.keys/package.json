@@ -1,0 +1,64 @@
+{
+  "_from": "@types/lodash.keys",
+  "_id": "@types/lodash.keys@4.2.6",
+  "_inBundle": false,
+  "_integrity": "sha512-FCtZsHapyH/Xu0New7jTLiNwbDfirIgpmii+vndMxM9Guz+kU+uYgKvSaVN4H+CReT6Ht+sfZTrquq0hnSjgxg==",
+  "_location": "/@types/lodash.keys",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@types/lodash.keys",
+    "name": "@types/lodash.keys",
+    "escapedName": "@types%2flodash.keys",
+    "scope": "@types",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/@types/lodash.keys/-/lodash.keys-4.2.6.tgz",
+  "_shasum": "9fb27c91b9d13c523e1d83dc7e20e48f0ce6c087",
+  "_spec": "@types/lodash.keys",
+  "_where": "/Users/yaozhangpeng/Documents/my/wechat-min-program/ToNote",
+  "bugs": {
+    "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Brian Zengel",
+      "url": "https://github.com/bczengel"
+    },
+    {
+      "name": "Ilya Mochalov",
+      "url": "https://github.com/chrootsu"
+    },
+    {
+      "name": "Stepan Mikhaylyuk",
+      "url": "https://github.com/stepancar"
+    }
+  ],
+  "dependencies": {
+    "@types/lodash": "*"
+  },
+  "deprecated": false,
+  "description": "TypeScript definitions for lodash.keys",
+  "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped#readme",
+  "license": "MIT",
+  "main": "",
+  "name": "@types/lodash.keys",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+    "directory": "types/lodash.keys"
+  },
+  "scripts": {},
+  "typeScriptVersion": "2.8",
+  "types": "index",
+  "typesPublisherContentHash": "ec4fc76ffa4a88b6c83f10f9cc49a5de95669dd9c4b1352e63680e96fed708d4",
+  "version": "4.2.6"
+}

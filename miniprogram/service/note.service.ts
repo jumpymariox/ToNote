@@ -51,6 +51,23 @@ class NoteService {
       })
     })
   }
+
+  deleteNotes(ids: string[]): Promise<void[]> {
+    return Promise.all<void>(ids.map((id: string) => {
+      return new Promise<void>((resolve: () => void) => {
+        wx.request({
+          url: `http://${NoteService.domain}:3000/notes/${id}`,
+          method: "DELETE",
+          success({ statusCode }) {
+            if (statusCode === 200) {
+              resolve()
+            }
+          }
+        })
+      })
+    }));
+
+  }
 }
 
 const noteService = new NoteService();
