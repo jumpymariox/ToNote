@@ -1,5 +1,6 @@
-const pickBy = require("lodash.pickby")
-const keys = require("lodash.keys")
+//const pickBy = require("lodash.pickby")
+import keys from "lodash.keys";
+import pickBy from "lodash.pickby";
 
 namespace NoteList {
   export type IData = {

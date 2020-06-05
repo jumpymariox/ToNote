@@ -34,10 +34,7 @@ Page<Index.IData, Index.ICustom>({
     this.fetchAndSetNotes();
   },
   createNote() {
-    const note = { title: "test", content: "lalallaal" }
-    noteService.createNote(note).then(() => {
-      console.log("create success")
-    })
+    wx.navigateTo({ url: "/pages/note/note" });
   },
   readyToEditNotes() {
     this.setData({
