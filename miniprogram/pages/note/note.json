@@ -1,8 +1,6 @@
 {
   "usingComponents": {
-    "mp-cells": "/miniprogram_npm/weui-miniprogram/cells/cells",
-    "mp-cell": "/miniprogram_npm/weui-miniprogram/cell/cell",
-    "mp-form": "/miniprogram_npm/weui-miniprogram/form/form",
-    "note-editor": "../../components/note-editor/note-editor"
+    "note-editor": "../../components/note-editor/note-editor",
+    "mp-icon": "/miniprogram_npm/weui-miniprogram/icon/icon"
   }
 }

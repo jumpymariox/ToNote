@@ -31,6 +31,8 @@ Page<Index.IData, Index.ICustom>({
     selectedNoteIds: []
   },
   onLoad() {
+  },
+  onShow() {
     this.fetchAndSetNotes();
   },
   createNote() {

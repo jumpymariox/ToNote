@@ -36,11 +36,27 @@ class NoteService {
     })
   }
 
-  createNote(note: { title: string, content: string }): Promise<void> {
+  createNote(note: { title: string, content: string, text: string }): Promise<void> {
     return new Promise((resolve, reject) => {
       wx.request({
         url: `http://${NoteService.domain}:3000/notes`,
         method: "POST",
+        data: JSON.stringify(note),
+        success() {
+          resolve()
+        },
+        fail() {
+          reject()
+        }
+      })
+    })
+  }
+
+  updateNote(note: Note): Promise<void> {
+    return new Promise((resolve, reject) => {
+      wx.request({
+        url: `http://${NoteService.domain}:3000/notes/${note.id}`,
+        method: "PUT",
         data: JSON.stringify(note),
         success() {
           resolve()

@@ -24,7 +24,15 @@ type ICustom = {
   insertDate: () => void,
   insertImage: () => void,
   toggleShowTooltip: (keyboardHeight: number) => void
-  setDefaultValue: (value: string) => void
+  setDefaultValue: (value: string) => void,
+  getContents: () => Promise<EditorContents>
+}
+
+interface EditorContents {
+  delta: Record<string, any>,
+  errMsg: string,
+  html: string,
+  text: string
 }
 
 Component<IData, IProperty, ICustom>({
@@ -168,6 +176,13 @@ Component<IData, IProperty, ICustom>({
         return
       }
       this.data.editorCtx.setContents({ html: value });
+    },
+    getContents(): Promise<EditorContents> {
+      return new Promise<EditorContents>((resolve) => {
+        this.data.editorCtx.getContents({
+          success(editorContents: EditorContents) { resolve(editorContents) }
+        });
+      })
     }
   }
 })

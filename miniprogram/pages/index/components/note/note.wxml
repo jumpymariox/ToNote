@@ -5,5 +5,5 @@
 
 <view class="container">
 	<text class="title">{{note.title}}</text>
-	<text class="content">{{note.content}}</text>
+	<text class="text">{{note.text}}</text>
 </view>

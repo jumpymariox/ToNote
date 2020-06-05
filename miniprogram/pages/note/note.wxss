@@ -36,3 +36,32 @@
 .note-editor-cell>.note-editor {
   height: 100%;
 }
+
+.button-container {
+  position: fixed;
+  right: 40rpx;
+  bottom: 60rpx;
+}
+
+.button-container>button {
+  display: none;
+  justify-content: center;
+  align-content: center;
+  border-radius: 50%;
+  width: 100rpx;
+  height: 100rpx;
+  overflow: hidden;
+  box-shadow: 2rpx 2rpx 2rpx 2rpx #ddd;
+}
+
+.button-container>button.show {
+  display: flex;
+}
+
+.save-btn {
+  background: #03dac5;
+}
+
+.weui-icon {
+  margin-top: 24rpx;
+}

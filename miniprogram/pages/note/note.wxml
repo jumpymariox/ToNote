@@ -1,13 +1,18 @@
 <!--miniprogram/pages/note/note.wxml-->
 <view class="container">
-	<mp-form id="form" class="note-form" rules="{{rules}}" models="{{formData}}">
+	<form id="form" class="note-form" bindsubmit="saveNote">
 		<view class="note-cells">
 			<view class="note-input-cell">
-				<input class="note-input" maxlength="25" bindinput="formInputChange" data-field="title" placeholder="标题" value="{{note.title}}" />
+				<input name="title" class="note-input" maxlength="25" data-field="title" placeholder="标题" value="{{note.title}}" />
 			</view>
 			<view class="note-editor-cell">
-				<note-editor class="note-editor" defaultValue="{{note.content}}"></note-editor>
+				<note-editor id="noteEditor" name="content" class="note-editor" defaultValue="{{note.content}}"></note-editor>
 			</view>
 		</view>
-	</mp-form>
+		<view class="button-container">
+			<button formType="submit" class="save-btn {{showSaveBtn?'show':''}}" size="mini">
+				<mp-icon icon="done" color="#fff" size="{{26}}"></mp-icon>
+			</button>
+		</view>
+	</form>
 </view>
