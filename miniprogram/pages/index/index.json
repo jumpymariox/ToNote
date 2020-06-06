@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "note-list":"./components/note-list/note-list",
+    "note-list": "./components/note-list/note-list",
     "mp-icon": "/miniprogram_npm/weui-miniprogram/icon/icon"
-  } 
+  }
 }

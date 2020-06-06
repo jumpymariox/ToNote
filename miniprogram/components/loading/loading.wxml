@@ -1,0 +1,3 @@
+<!--components/loading/loading.wxml-->
+<mp-loading type="circle"></mp-loading>
+

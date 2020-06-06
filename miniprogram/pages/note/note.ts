@@ -2,7 +2,12 @@
 
 import { noteService } from "../../service/note.service";
 
-type IData = { id?: string, note?: Note, isCreate: boolean, showSaveBtn: boolean }
+type IData = {
+  id?: string,
+  note?: Note,
+  isCreate: boolean,
+  showSaveBtn: boolean
+}
 type ICustom = {
   saveNote: (e: any) => void,
   createNote: (note: { title: string, content: string, text: string }) => void,
@@ -26,9 +31,13 @@ Page<IData, ICustom>({
       return
     }
     if (typeof options.id === "string") {
+      wx.showLoading({ title: "加载中" })
       this.setData({ isCreate: false })
       noteService.fetchNote(options.id).then(({ note }: { note: Note }) => {
         this.setData({ id: note.id, note: note })
+        wx.hideLoading();
+      }).catch(() => {
+        wx.hideLoading();
       });
     } else {
       this.setData({ isCreate: true })

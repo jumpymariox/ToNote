@@ -68,11 +68,16 @@ Page<Index.IData, Index.ICustom>({
   },
 
   fetchAndSetNotes(): Promise<void> {
+    wx.showLoading({ title: "加载中" });
     return new Promise((resolve, reject) => {
       noteService.fetchNotes().then(({ notes }: { notes: Note[] }) => {
         this.setData({ notes: notes });
+        wx.hideLoading();
         resolve();
-      }).catch(reject)
+      }).catch(() => {
+        wx.hideLoading();
+        reject()
+      })
     });
   }
 })
